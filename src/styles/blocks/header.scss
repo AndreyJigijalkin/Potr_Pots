@@ -6,7 +6,7 @@
     display: none;
 
     @include onTablet {
-      width: 100%;
+      width: 100vw;
       height: 500px;
       display: inline-block;
       position: absolute;
@@ -107,7 +107,7 @@
     @include onTablet {
       position: absolute;
       top: 121px;
-      width: 306px;
+      width: 40%;
       left: inherit;
       right: 34px;
       margin-bottom: 0;
@@ -117,8 +117,6 @@
     @include onDesktop {
       top: 151px;
       right: calc(120px + 1%);
-      height: 500px;
-      width: 500px
     }
   }
 

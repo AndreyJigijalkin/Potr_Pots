@@ -11,17 +11,30 @@
     &__list {
       display: flex;
       flex-direction: row;
-      gap: 60px;
+      gap: 40px;
+    }
+
+    &__link {
+      position: relative;
+      display: block;
+      transition: all $transition-duration;
+
+      &:hover {
+        transform: scale(1.2);
+      }
     }
 
     &__item {
       text-decoration: none;
       color: $dark-grey;
+      padding: 5px 10px;
+      border-radius: 20px;
 
-      transition: all $transition-duration;
+      transition: all 0.2s;
 
       &:hover {
-        color: $blue;
+        background-color: $blue;
+        color: $yellow;
       }
     }
 
@@ -30,12 +43,15 @@
     }
 
     &__bag {
+      box-sizing: border-box;
       display: block;
       height: 30px;
       width: 30px;
       background-size: cover;
       background-repeat: no-repeat;
+      background-position: 0 -0.8px;
       background-image: url("../images/icons/menu-bag.svg");
+      transition: transform $transition-duration;
 
       &:hover {
         transform: scale(1.2);

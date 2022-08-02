@@ -35,14 +35,15 @@
       position: relative;
 
       &::after {
+        content: "0";
         position: absolute;
         right: -20px;
         top: 0;
-        display: grid;
+        display: flex;
         width: 14px;
         height: 14px;
-        place-items: center;
-        content: "0";
+        line-height: 16px;
+        justify-content: center;
         background-color: $red;
         font-family: "bebas neue";
         font-size: 10px;

@@ -62,8 +62,10 @@
     transition: all $transition-duration;
     letter-spacing: 0.06em;
 
-    &:hover {
-      color: $blue;
+    @include onDesktop {
+      &:hover {
+        color: $blue;
+      }
     }
   }
 
@@ -90,10 +92,6 @@
       width: 32px;
       margin-right: 8px;
       transition: all $transition-duration;
-
-      &:hover {
-        filter:invert(100%)
-      }
 
       @include onDesktop {
         display: none;
@@ -188,13 +186,15 @@
       color: #121212;
       transition: all $transition-duration;
 
-      &:hover {
-        background-color: $blue;
-        color: #fff;
+      @include onDesktop {
+        &:hover {
+          background-color: $blue;
+          color: #fff;
 
-        &::after {
+          &::after {
 
-          filter:invert(100%);
+            filter:invert(100%);
+          }
         }
       }
 

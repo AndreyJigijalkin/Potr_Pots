@@ -15,3 +15,16 @@
     @content;
   }
 }
+
+@mixin textUnderline {
+  display: block;
+  position: absolute;
+  content: '';
+  width: 100%;
+  opacity: 0;
+  background-color: $blue;
+  bottom: -5px;
+  height: 2px;
+  border-radius: 5px;
+  transition: all $transition-duration;
+}

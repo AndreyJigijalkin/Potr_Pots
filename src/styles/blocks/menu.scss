@@ -1,0 +1,45 @@
+.menu {
+  @extend %manrope-16;
+  display: none;
+  &__shopper {
+  display: none;
+  }
+
+  @include onDesktop {
+    display: flex;
+
+    &__list {
+      display: flex;
+      flex-direction: row;
+      gap: 60px;
+    }
+
+    &__item {
+      text-decoration: none;
+      color: $dark-grey;
+
+      transition: all $transition-duration;
+
+      &:hover {
+        color: $blue;
+      }
+    }
+
+    &__shopper {
+      display: block;
+    }
+
+    &__bag {
+      display: block;
+      height: 30px;
+      width: 30px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url("../images/icons/menu-bag.svg");
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}

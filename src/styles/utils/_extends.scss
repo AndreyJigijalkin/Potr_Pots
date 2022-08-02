@@ -1,4 +1,76 @@
-%h1 {
-  font-family: "Roboto", sans-serif;
+%bebas-64 {
+  font-family: 'Bebas Neue';
+  font-style: normal;
   font-weight: 400;
+  font-size: 64px;
+  line-height: 64px;
+
+  color: #000;
+}
+
+%bebas-58 {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: 70px;
+
+  color: #000;
+}
+
+%bebas-36 {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 150%;
+
+  color: #000;
+}
+
+%bebas-24 {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+
+  color: #000;
+}
+
+%bebas-18 {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+
+  color: #000;
+}
+
+%button-manrope {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+
+%manrope-32 {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+
+  color: #000000;
+}
+
+%manrope-16 {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
 }

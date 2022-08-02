@@ -1,0 +1,91 @@
+.side-menu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  background-color: $blue;
+  transform: translateX(100%);
+  width: 230px;
+
+  transition: all $transition-duration;
+
+  &:target {
+    transform: translateX(0%);
+  }
+
+  overflow: scroll;
+
+  display: flex;
+
+  &__list {
+    margin: auto;
+
+  }
+
+  &__link {
+    margin-bottom: 15px;
+  }
+
+  &__item {
+    text-decoration: none;
+    @extend %manrope-16;
+    color: #fff;
+
+    &--basket {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        right: -20px;
+        top: 0;
+        display: grid;
+        width: 14px;
+        height: 14px;
+        place-items: center;
+        content: "0";
+        background-color: $red;
+        font-family: "bebas neue";
+        font-size: 10px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__closer {
+    position: fixed;
+    transform: rotate(-90deg);
+    bottom: 150px;
+    right: 25px;
+
+    &-link {
+      position: relative;
+      text-transform: uppercase;
+      @extend %manrope-16;
+      text-decoration: none;
+      font-size: 12px;
+      color: #fff;
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        background-image: url("../images/icons/line.svg");
+        top: 50%;
+        right: calc(100% + 5px);
+        height: 2px;
+        width: 44px;
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        background-image: url("../images/icons/cross.svg");
+        top: 25%;
+        right: calc(100% + 67px );
+        height: 12px;
+        width: 12px;
+      }
+    }
+  }
+}

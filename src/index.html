@@ -1,13 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head class="page">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
     <link rel="stylesheet" href="./styles/main.scss">
-  </head>
-  <body>
-    <h1>Hello Mate Academy</h1>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
     <script type="text/javascript" src="scripts/main.js"></script>
+  </head>
+  <body class="page__body">
+    <header class="header">
+      <img
+        src="./images/Rectangle.svg"
+        alt=""
+        class="header__rectangle"
+      >
+
+      <div class="header__menu">
+        <a href="#" class="header__link">
+          potr pots
+        </a>
+
+        <a href="#side-menu" class="header__menu-opener"></a>
+
+        <div class="menu">
+          <ul class="menu__list">
+            <li class="menu__link">
+              <a href="#" class="menu__item">Features</a>
+            </li>
+            <li class="menu__link">
+              <a href="#" class="menu__item">About us</a>
+            </li>
+            <li class="menu__link">
+              <a href="#" class="menu__item">Materials</a>
+            </li>
+            <li class="menu__link">
+              <a href="#" class="menu__item">Message us</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="menu__shopper">
+          <a href="#" class="menu__bag"></a>
+        </div>
+      </div>
+        <img
+          src="./images/header-cactus.png"
+          alt="header-cactus"
+          class="header__cactus"
+        >
+        <div class="container">
+
+          <div class="header__extra">
+            <a href="#" class="header__extra-text">
+              More about  POTR POTS
+            </a>
+            <img
+              src="./images/icons/blue-arrow.svg"
+              alt="arrow"
+              class="header__extra-arrow"
+            >
+          </div>
+
+          <div class="grid grid--tablet grid--desktop">
+            <div class="grid__item grid__item1-4-t grid__item1-2-m grid__item2-6-d">
+              <h1 class="header__title">
+                <span class="header__border-text">POTR ~ Eco, self-</span>watering, origami <span class="header__border-text">plant</span> pots
+              </h1>
+            </div>
+
+            <div class="grid__item grid__item3-4-t grid__item1-1-m grid__item5-6-d">
+              <div class="header__buy">
+                <p class="header__buy-price">$ 7,50</p>
+                <p class="header__buy-text">Get the second order in half price</p>
+              </div>
+            </div>
+
+            <div class="grid__item grid__item2-3-t grid__item1-2-m grid__item4-6-d">
+              <a href="#" class="header__buy-button">
+                buy now
+              </a>
+            </div>
+          </div>
+        </div>
+    </header>
+
+    <menu class="side-menu" id="side-menu">
+      <ul class="side-menu__list">
+        <li class="side-menu__link">
+          <a href="#" class="side-menu__item side-menu__item--basket">Basket</a>
+        </li>
+        <li class="side-menu__link">
+          <a href="#" class="side-menu__item">Features</a>
+        </li>
+        <li class="side-menu__link">
+          <a href="#" class="side-menu__item">About us</a>
+        </li>
+        <li class="side-menu__link">
+          <a href="#" class="side-menu__item">Materials</a
+          ></li>
+        <li class="side-menu__link">
+          <a href="#" class="side-menu__item">Message us</a>
+        </li>
+      </ul>
+
+      <div class="side-menu__closer">
+        <a href="#" class="side-menu__closer-link">
+          close
+        </a>
+      </div>
+    </menu>
   </body>
 </html>

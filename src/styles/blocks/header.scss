@@ -10,6 +10,7 @@
       height: 500px;
       display: inline-block;
       position: absolute;
+      top: 0;
       z-index: -1;
       left: -100px;
     }
@@ -177,7 +178,7 @@
       display: block;
       position: relative;
       background-color: $yellow;
-      padding-left: 30%;
+      padding-left: 25%;
       @extend %button-manrope;
       line-height: 48px;
       text-decoration: none;
@@ -203,7 +204,7 @@
         background-repeat: no-repeat;
         width: 30px;
         height: 10px;
-        right: 30%;
+        right: 25%;
         top: 50%;
         transform: translateY(-25%);
         transition: all $transition-duration;

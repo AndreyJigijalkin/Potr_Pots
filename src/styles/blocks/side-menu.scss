@@ -6,6 +6,7 @@
   background-color: $blue;
   transform: translateX(100%);
   width: 230px;
+  z-index: 1;
 
   transition: all $transition-duration;
 

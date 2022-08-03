@@ -237,6 +237,7 @@
   &__extra {
 
     &-1 {
+      height: max-content;
       position: absolute;
       bottom: 2%;
       right: -15px;
@@ -246,7 +247,7 @@
       letter-spacing: 0.22em;
       font-size: 12px;
 
-      &::before {
+      &::after {
         content: '';
         position: absolute;
         background-image: url("../images/icons/grey-line.svg");
@@ -261,8 +262,14 @@
         transform: translateY(-100%);
       }
 
+      @include onTablet {
+        top: 150px;
+        transform: translate(0);
+        transform: rotate(90deg);
+      }
+
       @include onDesktop {
-        right: calc(95px + 1%);
+        right: calc(100px + 1%);
         top: 300px;
       }
     }
@@ -275,7 +282,7 @@
       font-size: 12px;
 
       @include onDesktop {
-        display: block;
+        display: inline;
         position: absolute;
         bottom: 5%;
         left: calc(95px + 1%);

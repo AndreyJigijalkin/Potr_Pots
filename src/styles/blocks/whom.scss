@@ -151,17 +151,9 @@
   &__photo {
     &-1,&-2,&-3 {
       display: none;
-      transition: all $transition-duration;
 
       @include onTablet {
         display: inherit;
-      }
-
-      &:hover {
-        @include onDesktop {
-          box-shadow: 0px 0px 27px 7px $blue,
-          inset 0px 0px 27px 7px $blue;
-        }
       }
     }
 

@@ -1,0 +1,11 @@
+.photo {
+  &-hover {
+    transition: all $transition-duration;
+    &:hover {
+      @include onDesktop {
+        box-shadow: 0px 0px 17px 5px $blue,
+        inset 0px 0px 27px 5px $blue;
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+.features {
+  position: relative;
+  padding-top: 110px;
+
+  &__title {
+    @extend %bebas-58;
+    color: $blue;
+    text-align: center;
+    margin-bottom: 22px;
+
+    @include onTablet {
+      text-align: left;
+      margin-bottom: 50px;
+    }
+
+    @include onDesktop {
+      margin-bottom: 70px;
+    }
+
+    @include onDesktop {
+      padding-top: 130px;
+    }
+  }
+
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 67px;
+
+    @include onTablet {
+      margin-bottom: 0;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    @include onDesktop {
+      align-items: center;
+      text-align: center;
+    }
+
+    &-title {
+      padding-top: 38px;
+      @extend %bebas-24;
+      letter-spacing: 0.155em;
+      color: $gray;
+    }
+
+    &-text {
+      padding-top: 20px;
+      @extend %manrope-16;
+      line-height: 24px;
+      color: $dark-grey;
+    }
+  }
+
+  &__nomargin {
+    margin-bottom: 0;
+  }
+
+  &__photo {
+    width: 100%;
+  }
+}

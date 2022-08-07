@@ -2,7 +2,8 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 20px;
-
+  grid-auto-flow: column;
+  
     &--tablet {
       @include onTablet {
         display: grid;
@@ -36,12 +37,6 @@
           &#{$start}-#{$end}-t {
             grid-column: #{$start} / #{$end + 1};
             }
-          }
-        }
-        &--t-hidden {
-          display: none;
-          @include onDesktop {
-            display: grid;
           }
         }
       }

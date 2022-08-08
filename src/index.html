@@ -8,15 +8,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="scripts/main.js"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+  />
   </head>
-  <body class="page__body">
+  <body class="page__body" id="page__body">
     <img
       src="./images/Rectangle.svg"
       alt="yellow_rectangle"
       class="header__rectangle"
     >
-    <header class="header">
+    <header class="header" id="header">
 
       <div class="header__menu">
         <a href="#" class="header__link">
@@ -113,7 +116,7 @@
       </div>
     </nav>
 
-    <main class="main">
+    <main class="main" id="main">
       <section class="whom" id="whom">
         <div class="whom__extra-1">
           potr pots
@@ -299,8 +302,40 @@
           <img src="./images/plants.png" alt="" class="materials__photo">
         </div>
 
-        
+        <div class="swiper materials__swiper">
+          <div class="swiper-wrapper materials__wrapper">
+            <div class="swiper-slide material__slide">
+              <p class="swiper-text">We have chosen Bobbiny recycled cotton cord to use as our draw string and wicking cord. Not only is it 100% recycled, it looks great and works really well at wicking water</p>
+            </div>
+            <div class="swiper-slide material__slide">
+              <p class="swiper-text">Shipped flat packed so they can be slipped through your letterbox, POTR Pots have the smallest carbon footprint possible during transit.</p>
+            </div>
+            <div class="swiper-slide material__slide">
+              <p class="swiper-text">Once assembled the cotton cord doubles as the watering system, allowing your plants to self-regulate their water intake using tried and tested wicking technology.</p>
+            </div>
+            <div class="swiper-slide material__slide">
+              <p class="swiper-text">POTR pots are flat pack, origami planters designed to self-water your plants, made from recycled materials.</p>
+            </div>
+            <div class="swiper-slide material__slide">
+              <p class="swiper-text">POTR Pots are constructed using recycled polypropylene which can be fully recycled.</p>
+            </div>
+          </div>
+          <div class="swiper-pagination">
+            <div class="swiper-pagination-bullet"></div>
+          </div>
+        </div>
+
       </section>
     </main>
+    <script type="text/javascript" src="scripts/main.js"></script>
+    <script type="module">
+      import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
+      const swiper = new Swiper('.swiper', {
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: false,
+        }
+      })
+    </script>
   </body>
 </html>

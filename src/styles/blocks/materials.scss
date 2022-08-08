@@ -1,5 +1,6 @@
 .materials {
   padding-top: 110px;
+  position: relative;
 
   &__title {
     @extend %bebas-58;
@@ -22,7 +23,9 @@
 
     &-container {
       position: relative;
+      padding-bottom: 60%;
       top: -80px;
+      height: 100%;
 
       &::before {
         z-index: -1;
@@ -36,5 +39,51 @@
         background: linear-gradient(to top, rgba(233, 230, 230, 0.493), transparent);
       }
     }
+  }
+}
+
+.swiper {
+  top: -80px;
+  height: 250px;
+  background-color: rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(14px);
+  width: 95%;
+
+  &-text {
+    display: block;
+    padding: 28px 44px;
+    @extend %manrope-16;
+    color: #f8f8f8;
+    line-height: 24px;
+
+    &:hover {
+      cursor: default;
+    }
+  }
+
+  &-pagination {
+    position: relative;
+    top: 207px;
+    width: 30px;
+  }
+    .swiper-pagination-bullet {
+      box-sizing: border-box;
+      border-radius: 1px;
+      width: 10px;
+      height: 10px;
+      transform: rotate(45deg);
+      background-color: $blue;
+      border: 1px solid $blue;
+      opacity: 0.6;
+      backdrop-filter: blur(30px);
+
+      &-active {
+        background-color: $yellow;
+        opacity: 1;
+      }
+  }
+
+  @include onTablet {
+    display: none;
   }
 }

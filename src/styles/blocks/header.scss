@@ -2,6 +2,11 @@
   position: relative;
   box-sizing: border-box;
 
+  &--blur {
+    filter: blur(10px);
+    transition: $transition-duration;
+  }
+
   &__rectangle {
     display: none;
 

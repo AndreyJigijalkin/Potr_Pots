@@ -10,5 +10,9 @@
   &__body {
     max-width: 1440px;
     margin: 0 auto;
+
+    &--with-menu {
+      overflow: hidden;
+    }
   }
 }

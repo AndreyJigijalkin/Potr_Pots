@@ -1,0 +1,124 @@
+.team {
+  padding-top: 110px;
+  position: relative;
+
+  @include onTablet {
+    padding-bottom: 21%;
+    overflow: hidden;
+  }
+  @include onDesktop {
+    padding-bottom: 17%;
+  }
+
+  &__title {
+    text-align: left;
+    line-height: 70px;
+    margin-bottom: 25px;
+
+    @extend %bebas-58;
+
+    @include onTablet {
+      margin-bottom: 170px;
+    }
+  }
+
+  &__photo {
+    &-container {
+      position: relative;
+      padding-bottom: 90%;
+      margin-bottom: 30px;
+      left: -30px;
+      width: calc(100% + 60px);
+
+      @include onTablet {
+        width: 100%;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        left: 0;
+
+        &::after {
+          position: absolute;
+          top: -150px;
+          left: -440px;
+          content: 'martin';
+          text-transform: uppercase;
+          font-size: 230px;
+          -webkit-text-stroke: 1px $blue;
+          color: transparent;
+          font-family: "bebas neue";
+          letter-spacing: 0.155em;
+          z-index: 1;
+        }
+
+        &::before {
+          position: absolute;
+          bottom: -210px;
+          right: -50px;
+          content: 'Andy';
+          text-transform: uppercase;
+          font-size: 230px;
+          -webkit-text-stroke: 1px $blue;
+          color: transparent;
+          font-family: "bebas neue";
+          letter-spacing: 0.155em;
+          z-index: 1;
+        }
+      }
+
+      @include onDesktop {
+        &::before {
+          font-size: 280px;
+          bottom: -260px;
+          right: -250px
+        }
+
+        &::after {
+          font-size: 280px;
+          top: -100px;
+        }
+      }
+    }
+
+    position: absolute;
+    width: 100%;
+    left: 0;
+
+    @include onTablet {
+      position: inherit
+    }
+  }
+
+  &__description {
+    @extend %manrope-16;
+    line-height: 24px;
+    color: $dark-grey;
+
+    @include onTablet {
+      position: relative;
+      font-family: "Proxima Nova 400";
+      top: 60px;
+    }
+
+    @include onDesktop {
+      display: block;
+      top: 45%;
+      width: 340px;
+    }
+  }
+
+  &__rectangle {
+    position: absolute;
+    bottom: -20px;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    width: 100%;
+
+    @include onTablet {
+      top: 30%;
+      left: 0;
+      right: inherit;
+      width: 33%;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.materials {
+  padding-top: 110px;
+
+  &__title {
+    @extend %bebas-58;
+    line-height: 70px;
+    color: $blue;
+  }
+
+  &__description {
+    display: none;
+
+    &-title {
+      display: none;
+    }
+  }
+
+  &__photo {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+
+    &-container {
+      position: relative;
+      top: -80px;
+
+      &::before {
+        z-index: -1;
+        content: '';
+        display: block;
+        position: absolute;
+        height: 30px;
+        top: -20px;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(233, 230, 230, 0.493), transparent);
+      }
+    }
+  }
+}

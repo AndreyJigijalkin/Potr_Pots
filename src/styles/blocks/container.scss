@@ -12,4 +12,16 @@
   @include onDesktop {
     padding: 0 135px;
   }
+
+  &--size {
+    padding-top: 30px;
+
+    @include onTablet {
+      padding-top: 210px;
+    }
+
+    @include onDesktop {
+      padding-top: 150px;
+    }
+  }
 }

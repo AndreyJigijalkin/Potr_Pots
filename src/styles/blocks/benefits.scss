@@ -1,0 +1,222 @@
+.benefits {
+  padding-top: 110px;
+  overflow: hidden;
+  position: relative;
+
+  &__photo {
+    display: none;
+
+    @include onDesktop {
+      display: block;
+      width: 110%;
+      transform: translateX(-10%);
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 69px;
+
+    @include onDesktop {
+      flex-flow: row wrap;
+      gap: 70px 80px;
+      position: relative;
+      top: 100px;
+    }
+  }
+
+  &__description {
+    position: relative;
+    display: inline-block;
+    @extend %manrope-32;
+    color: $gray;
+    line-height: 150%;
+
+    &::before {
+      content: '';
+      height: 8px;
+      width: 8px;
+      display: block;
+      position: absolute;
+      background-color: $gray;
+      left: -15px;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    &::after {
+      position: absolute;
+      display: block;
+      @extend %manrope-16;
+      line-height: 24px;
+      width: 260px;
+      color: #828282;
+      bottom: -40px;
+      left: 0;
+
+      @include onDesktop {
+        width: max-content;
+      }
+    }
+
+    &--1 {
+      &::after {
+        content: 'Pull the draw string to assemble!';
+      }
+    }
+    &--2 {
+      &::after {
+        content: 'POTR pots arrive flat packed in an envelope!';
+        bottom: -60px;
+      }
+    }
+
+    &--3 {
+      &::after {
+        content: 'Add water to POTR and watch your plant drink!';
+        bottom: -60px;
+      }
+    }
+
+    &--2, &--3 {
+      &::after {
+        @include onDesktop {
+          bottom: -40px;
+        }
+      }
+    }
+  }
+
+  &__buy {
+    &-button {
+      display: inline-block;
+      box-sizing: border-box;
+      margin-top: 103px;
+      background-color: $blue;
+      color: #f8f8f8;
+      margin-bottom: 40px;
+      width: 100%;
+
+      &::after {
+        filter: invert(100%);
+      }
+
+      @include onTablet {
+        width: 110%;
+        border: 1px solid $blue;
+        background-color: transparent;
+        color: #000;
+
+        &::after {
+          filter:invert(0);
+        }
+      }
+      @include onDesktop {
+        position: relative;
+        top: -430px;
+        width: 90%;
+        background-color: $blue;
+        border: none;
+        color: #fff;
+
+        &::after {
+          filter: invert(100%);
+        }
+
+        &:hover {
+          background-color: $yellow;
+          color: black;
+
+          &::after {
+            filter: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__offer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    @extend %bebas-36;
+    letter-spacing: 0.155em;
+
+    @include onTablet {
+      position: relative;
+      top: -90px;
+    }
+
+    @include onDesktop {
+      top: -220px;
+      height: 0;
+    }
+  }
+
+  &__discount {
+    color: $red;
+
+    @include onTablet {
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    @include onDesktop {
+      font-size: 36px;
+      line-height: 150%;
+    }
+  }
+
+  &__proposal {
+    color: $blue;
+
+    @include onTablet {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @include onDesktop {
+      font-size: 24px;
+      line-height: 150%;
+    }
+  }
+  &__bt {
+    @include onDesktop {
+      height: 0;
+    }
+  }
+
+  &__extra{
+    display: none;
+    position: absolute;
+    transform: rotate(90deg);
+    top: 50%;
+    right: -45px;
+    @extend %bebas-18;
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    color: #828282;
+    z-index: 3;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -75px;
+      display: block;
+      background-color: #828282;
+      width: 65px;
+      height: 1px;
+      bottom: 50%;
+      transform: translateY(-50%);
+    }
+
+    @include onTablet {
+      display: block;
+    }
+
+    @include onDesktop {
+      display: none;
+    }
+  }
+}

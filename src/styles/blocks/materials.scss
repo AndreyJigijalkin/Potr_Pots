@@ -75,6 +75,7 @@
 
       @include onTablet {
         top: 100px;
+        width: 100%;
       }
 
       @include onDesktop {

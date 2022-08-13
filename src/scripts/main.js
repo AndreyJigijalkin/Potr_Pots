@@ -1,4 +1,3 @@
-'use strict';
 
 window.addEventListener('hashchange', () => {
   const header = document.getElementById('header');

@@ -123,9 +123,8 @@
     }
 
     &-container input ~ &-checkmark {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      display: grid;
+      place-items: center;
       transition: all $transition-duration;
       z-index: 0;
 
@@ -134,8 +133,6 @@
         content: '+';
         font-size: 30px;
         font-weight:lighter;
-        top: 60%;
-        transform: translateY(-72%);
       }
 
 

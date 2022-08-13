@@ -268,14 +268,13 @@
       @include onTablet {
         visibility: visible;
       }
-
-      @include onDesktop {
-        display: none;
-      }
     }
 
     &-1 {
       top: 100px;
+      @include onDesktop {
+        display: none;
+      }
     }
 
     &-2 {
@@ -297,6 +296,10 @@
         left: calc(-105% - 10px);
         top: 50%;
         transform: translateY(-100%);
+      }
+
+      @include onDesktop {
+        display: none;
       }
     }
   }

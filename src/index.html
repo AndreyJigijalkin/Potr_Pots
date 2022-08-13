@@ -9,9 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
     <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-  />
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    >
   </head>
   <body class="page__body" id="page__body">
     <img
@@ -281,25 +281,68 @@
       <section class="materials">
         <div class="container">
           <div class="grid grid--tablet grid--desktop">
-            <div class="grid__item1-2-m grid__item1-2-t grid__item1-4-d">
+            <div class="grid__item1-2-m grid__item1-5-t grid__item1-9-d">
               <h2 class="materials__title">
                 Materials and Features
               </h2>
             </div>
 
-            <div class="grid__item1-2-m grid__item1-2-t grid__item1-4-d">
-              <h3 class="materials__description-title">
-                Environmentally friendly
-              </h3>
+            <div class="grid__item1-2-m grid__item4-6-t grid__item9-12-d">
+              <div class="materials__description">
+                <h3 class="materials__description-title">
+                  Environmentally friendly
+                </h3>
 
-              <span class="materials__description">
-                All materials used in our pots are made from 100% recycled materials and are 100% recyclable at the end of life (should you ever choose to get rid of your POTR!). All materials have been sourced from within Europe to reduce our carbon footprint when transporting the raw materials, and all manufacturing is carried out in the UK.
-              </span>
+                <span class="materials__description-text">
+                  All materials used in our pots are made from 100% recycled materials and are 100% recyclable at the end of life (should you ever choose to get rid of your POTR!). All materials have been sourced from within Europe to reduce our carbon footprint when transporting the raw materials, and all manufacturing is carried out in the UK.
+                </span>
+              </div>
             </div>
           </div>
         </div>
         <div class="materials__photo-container">
-          <img src="./images/plants.png" alt="" class="materials__photo">
+          <img src="./images/plants.png" alt="plants" class="materials__photo">
+
+          <label class="materials__button-container materials__button-container--1">
+            <input
+              type="checkbox"
+              class="materials__button"
+            >
+            <span class="materials__button-checkmark materials__button-checkmark--1"></span>
+          </label>
+
+          <label class="materials__button-container materials__button-container--2">
+            <input
+              type="checkbox"
+              class="materials__button"
+            >
+            <span class="materials__button-checkmark materials__button-checkmark--2"></span>
+          </label>
+
+          <label class="materials__button-container materials__button-container--3">
+            <input
+              type="checkbox"
+              class="materials__button"
+            >
+            <span class="materials__button-checkmark materials__button-checkmark--3"></span>
+          </label>
+
+          <label class="materials__button-container materials__button-container--4">
+            <input
+              type="checkbox"
+              class="materials__button"
+            >
+            <span class="materials__button-checkmark materials__button-checkmark--4"></span>
+          </label>
+
+          <label class="materials__button-container materials__button-container--5">
+            <input
+              type="checkbox"
+              class="materials__button"
+            >
+            <span class="materials__button-checkmark materials__button-checkmark--5"></span>
+          </label>
+
         </div>
 
         <div class="swiper materials__swiper">
@@ -334,7 +377,9 @@
         pagination: {
           el: '.swiper-pagination',
           clickable: false,
-        }
+        },
+        loop: true,
+        speed: 600,
       })
     </script>
   </body>

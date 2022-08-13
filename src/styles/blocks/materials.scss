@@ -2,17 +2,63 @@
   padding-top: 110px;
   position: relative;
 
+  @include onTablet {
+    padding-top: 0;
+  }
+
+
   &__title {
     @extend %bebas-58;
     line-height: 70px;
     color: $blue;
+
+    @include onTablet {
+      font-size: 80px;
+      line-height: 96px;
+      letter-spacing: 0.12em;
+    }
+
+    @include onDesktop {
+      font-size: 130px;
+      width: 870px;
+      line-height: 166px;
+    }
   }
 
   &__description {
     display: none;
 
+    @include onTablet {
+      display: block;
+      position: absolute;
+      top: 130px;
+      padding-right: 34px;
+    }
+
+    @include onDesktop {
+      padding-right: calc(135px + 1%);
+    }
+
     &-title {
-      display: none;
+      font-family: 'Manrope';
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 150%;
+      color: $dark-grey;
+      margin-bottom: 10px;
+    }
+
+    &-text {
+      display: block;
+      position: relative;
+      left: -20px;
+      padding: 20px;
+      font-family: 'Manrope';
+      font-size: 16px;
+      line-height: 150%;
+
+      color: $dark-grey;
+      background-color: rgba(255, 255, 255, 0.393);
     }
   }
 
@@ -27,6 +73,16 @@
       top: -80px;
       height: 100%;
 
+      @include onTablet {
+        top: 100px;
+      }
+
+      @include onDesktop {
+        top: -170px;
+      }
+
+
+
       &::before {
         z-index: -1;
         content: '';
@@ -40,50 +96,167 @@
       }
     }
   }
-}
 
-.swiper {
-  top: -80px;
-  height: 250px;
-  background-color: rgba(0, 0, 0, 0.24);
-  backdrop-filter: blur(14px);
-  width: 95%;
+  &__button {
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
 
-  &-text {
-    display: block;
-    padding: 28px 44px;
-    @extend %manrope-16;
-    color: #f8f8f8;
-    line-height: 24px;
-
-    &:hover {
-      cursor: default;
+    &-container:hover input ~ &-checkmark {
+      cursor: pointer;
+      background-color: #eb5757;
     }
-  }
 
-  &-pagination {
-    position: relative;
-    top: 207px;
-    width: 30px;
-  }
-    .swiper-pagination-bullet {
-      box-sizing: border-box;
-      border-radius: 1px;
-      width: 10px;
-      height: 10px;
-      transform: rotate(45deg);
-      background-color: $blue;
-      border: 1px solid $blue;
-      opacity: 0.6;
-      backdrop-filter: blur(30px);
+    &-container input:checked ~ &-checkmark {
+      background: rgba(36, 35, 35, 0.75);
+      transform: scale(1.2);
 
-      &-active {
-        background-color: $yellow;
-        opacity: 1;
+      &::before {
+        content: '––';
+        color: #f8f8f8;
+        font-weight: 700;
+        font-size: 18px;
+        top: 60%;
+        transform: translateY(-85%);
       }
-  }
+    }
 
-  @include onTablet {
-    display: none;
+    &-container input ~ &-checkmark {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all $transition-duration;
+      z-index: 0;
+
+      &::before {
+        position: absolute;
+        content: '+';
+        font-size: 30px;
+        font-weight:lighter;
+        top: 60%;
+        transform: translateY(-72%);
+      }
+
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 200px;
+        left: -110px;
+        background: rgba(0, 0, 0, 0.445);
+        backdrop-filter: blur(15px);
+        padding: 35px;
+        text-align: left;
+        color: #f8f8f8;
+        font-family: "Manrope",sans-serif;
+        line-height: 150%;
+        font-size: 16px;
+        transform: scale(0);
+        transition: all $transition-duration;
+      }
+
+    &--1 {
+      &::after {
+        content: 'POTR Pots are constructed using recycled polypropylene which can be fully recycled.';
+        top: -180px;
+        left: -60px;
+        transform-origin: 30% 100%;
+      }
+    }
+
+    &--2 {
+      &::after {
+        content: 'POTR pots are flat pack, origami planters designed to self-water your plants, made from recycled materials.';
+        top: -200px;
+        transform-origin: bottom;
+      }
+    }
+
+    &--3 {
+      &::after {
+        content: 'Once assembled the cotton cord doubles as the watering system, allowing your plants to self-regulate their water intake using tried and tested wicking technology.';
+        top: -250px;
+        transform-origin: bottom;
+      }
+    }
+
+    &--4 {
+      &::after {
+        content: 'Shipped flat packed so they can be slipped through your letterbox, POTR Pots have the smallest carbon footprint possible during transit. ';
+        bottom: 70px;
+        transform-origin: bottom;
+      }
+    }
+
+    &--5 {
+      &::after {
+        content: 'Shipped flat packed so they can be slipped through your letterbox, POTR Pots have the smallest carbon footprint possible during transit. ';
+        top: 60px;
+        left: -250px;
+        transform-origin: 100% 0%;
+      }
+    }
+
+  }
+    &-container input:checked ~ &-checkmark {
+      z-index: 1;
+
+      &::after {
+        transform: scale(1.1);
+      }
+    }
+
+
+    &-container {
+      display: none;
+      position:  absolute;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      @include onTablet {
+        display: inline;
+      }
+
+      &--1 {
+        bottom: 0;
+        left: 15%;
+      }
+
+      &--2 {
+        bottom: 10%;
+        left: 33%;
+      }
+
+      &--3 {
+        bottom: -5%;
+        left: 50%;
+      }
+
+      &--4 {
+        bottom: 20%;
+        right: 30%;
+      }
+
+      &--5 {
+        bottom: 50%;
+        right: 10%;
+      }
+    }
+
+    &-checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      background-color: #eb5757d9;
+      font-size: 25px;
+      color: #f8f8f8;
+    }
   }
 }
